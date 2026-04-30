@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relogio de Objetivos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="hero">
+        <p class="eyebrow">Painel de objetivos</p>
+        <h1>Relogio de metas</h1>
+        <p class="subtitle">Clique em um marcador vermelho para acompanhar o prazo de cada objetivo.</p>
+      </section>
+
+      <section class="board" aria-label="Relogio com objetivos">
+        <div class="clock-card">
+          <canvas id="clockCanvas" width="620" height="620"></canvas>
+        </div>
+
+        <aside id="objectivePanel" class="objective-panel" hidden aria-live="polite">
+          <span class="objective-tag">Selecione um horario</span>
+          <h2>Objetivo</h2>
+          <p>Os pontos vermelhos no relogio representam objetivos importantes. Escolha um deles para ver detalhes e contagem regressiva.</p>
+          <div class="countdown-grid">
+            <span><strong>--</strong><small>dias</small></span>
+            <span><strong>--</strong><small>horas</small></span>
+            <span><strong>--</strong><small>min</small></span>
+            <span><strong>--</strong><small>seg</small></span>
+          </div>
+        </aside>
+      </section>
+
+      <section id="objectiveList" class="objective-list" hidden aria-label="Lista de objetivos"></section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
